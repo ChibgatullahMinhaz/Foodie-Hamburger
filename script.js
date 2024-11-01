@@ -43,11 +43,24 @@ document.addEventListener('click', (event) => {
     }
 });
 
+// popup outside click
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = menu.contains(event.target);
+    const isClickOnMenuIcon = menuIcon.contains(event.target);
+    
+    if (!isClickInsideMenu && !isClickOnMenuIcon && menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        menuIcon.setAttribute('aria-expanded', 'false'); // Update aria-expanded
+    }
+});
 // pupup
 
 const newsletterButton = document.querySelector('.newsletter-btn');
 const newsletterPopup = document.getElementById('newsletterPopup');
 const closePopupButton = document.querySelector('.close-popup');
+const subscribeBtn = document.querySelector(".subscribe-btn");
+const emailInput = document.getElementById("email");
+
 
 // Show the popup when the button is clicked
 newsletterButton.addEventListener('click', () => {
@@ -66,10 +79,14 @@ closePopupButton.addEventListener('click', () => {
     newsletterPopup.classList.remove('dark-mode');
 });
 
-// newsletterBtn.addEventListener('click', () => {
-//      // Show popup with transition
-// });
+subscribeBtn.addEventListener("click", ()=>{
+    if ( emailInput.value== "") {
+        alert("Please Enter Your Email")
 
-// closeBtn.addEventListener('click', () => {
-//     newsletterPopup.classList.remove('show'); // Hide popup with transition
-// });
+    }else{
+        alert("Thanks")
+                newsletterPopup.style.display = 'none';
+
+    }
+
+})

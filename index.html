@@ -21,6 +21,7 @@
             <img src="img/foodie hamburger logo.png" alt="Logo" />
         </div>
         <nav>
+           
             <div class="menu-icon" onclick="toggleMenu()">
                 <span class="icon">&#9776;</span> <!-- Menu icon -->
                 <span class="icon close" style="display: none;">&times;</span> <!-- Close icon -->
@@ -35,7 +36,7 @@
                     🌙
                 </button>
             </ul>
-            
+           
         </nav>
         
     </header>
@@ -93,8 +94,11 @@
             <div class="popup-content">
                 <span class="close-popup">&times;</span>
                 <h2>Subscribe to our Newsletter</h2>
-                <input type="email" placeholder="Enter your email">
+                <form>
+                    <input type="email" placeholder="Enter your email" required id="email">
                 <button class="subscribe-btn">Subscribe</button>
+                </form>
+                
             </div>
         </div>
         
