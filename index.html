@@ -5,10 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="This website for Foodie Hamburger" />
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
 
     <title>Foodie Hamburger</title>
     <link rel="stylesheet" href="style.css" />
@@ -22,19 +21,25 @@
             <img src="img/foodie hamburger logo.png" alt="Logo" />
         </div>
         <nav>
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span class="icon">&#9776;</span> <!-- Menu icon -->
+                <span class="icon close" style="display: none;">&times;</span> <!-- Close icon -->
+            </div>
             <ul class="nav_menu">
                 <li class="nav_list"><a href="#top_picks" class="nav_link">Top Picks</a></li>
                 <li class="nav_list"><a href="#Whopper" class="nav_link">Whopper</a></li>
                 <li class="nav_list"><a href="#Stunner_Menu" class="nav_link">Stunner Menu</a></li>
                 <li class="nav_list"><a href="#New_Foodie_Collection" class="nav_link">New Collection</a></li>
                 <li class="nav_list"><a href="#Deal_of_the_Day" class="nav_link">Deal of the Day</a></li>
-                <!-- Add this inside the header -->
-                <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    🌙
+                </button>
             </ul>
+            
         </nav>
+        
     </header>
+
     <main>
         <section id="cover_img" class="section">
             <div class="img_container" data-aos="fade-down">
@@ -57,14 +62,12 @@
             </div>
         </section>
 
-
         <section id="Stunner_Menu" class="section">
             <h2>Stunner Menu</h2>
             <div class="img_container" data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="200">
                 <img src="img/Stunner Menu.png" alt="Top Picks" />
             </div>
         </section>
-
 
         <section id="New_Foodie_Collection" class="section">
             <h2>New Foodie Collection</h2>
@@ -73,22 +76,19 @@
             </div>
         </section>
 
-
         <section id="Deal_of_the_Day" class="section">
             <h2>Deal of the Day</h2>
             <div class="img_container" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
                 <img src="img/Dealy of the Day.png" alt="Top Picks" />
             </div>
         </section>
-
     </main>
 
     <button id="goToTopBtn" class="go-to-top" onclick="scrollToTop()">↑</button>
 
     <footer>
         <p>© Chibgatullah Minhaz. All rights reserved.</p>
-      </footer>
-    
+    </footer>
 </body>
 
 </html>
