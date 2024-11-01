@@ -45,3 +45,6 @@ function scrollToTop() {
     behavior: "smooth" // This will give a smooth scrolling effect
   });
 }
+
+// animation of Scroll 
+AOS.init();
