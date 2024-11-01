@@ -25,3 +25,23 @@ function toggleTheme() {
     }
   };
   
+
+  // Get the button
+const goToTopBtn = document.getElementById("goToTopBtn");
+
+// Show the button when the user scrolls down 100px from the top of the document
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    goToTopBtn.style.display = "block";
+  } else {
+    goToTopBtn.style.display = "none";
+  }
+};
+
+// Scroll to the top of the document smoothly
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // This will give a smooth scrolling effect
+  });
+}
