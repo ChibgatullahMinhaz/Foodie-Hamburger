@@ -42,3 +42,34 @@ document.addEventListener('click', (event) => {
         menuIcon.setAttribute('aria-expanded', 'false'); // Update aria-expanded
     }
 });
+
+// pupup
+
+const newsletterButton = document.querySelector('.newsletter-btn');
+const newsletterPopup = document.getElementById('newsletterPopup');
+const closePopupButton = document.querySelector('.close-popup');
+
+// Show the popup when the button is clicked
+newsletterButton.addEventListener('click', () => {
+    newsletterPopup.style.display = 'block';
+    newsletterPopup.classList.add('show');
+
+    // Check if dark mode is active and apply it to popup
+    if (body.classList.contains('dark-mode')) {
+        newsletterPopup.classList.add('dark-mode');
+    }
+});
+
+// Close the popup when the close button is clicked
+closePopupButton.addEventListener('click', () => {
+    newsletterPopup.style.display = 'none';
+    newsletterPopup.classList.remove('dark-mode');
+});
+
+// newsletterBtn.addEventListener('click', () => {
+//      // Show popup with transition
+// });
+
+// closeBtn.addEventListener('click', () => {
+//     newsletterPopup.classList.remove('show'); // Hide popup with transition
+// });

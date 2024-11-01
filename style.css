@@ -159,6 +159,51 @@ footer p {
     text-align: center;
 }
 
+/* pupup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9); /* Initial scale for transition */
+  opacity: 0; /* Initial opacity for transition */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: none; /* Initially hidden */
+  padding: 20px;
+  background-color: #fff; /* Light mode */
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup.show {
+  display: block; /* Show popup */
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Full size */
+}
+
+/* Dark mode styles */
+.popup.dark-mode {
+  background-color: #333; /* Dark mode background */
+  color: #fff;
+}
+
+.newsletter-btn, .subscribe-btn {
+  cursor: pointer;
+}
+
+.newsletter-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.close-popup {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .menu-icon {
