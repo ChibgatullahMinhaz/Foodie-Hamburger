@@ -1,0 +1,129 @@
+/* style.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body{
+    background-color:#121212;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5%;
+  background-color: #E0E0E0;
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  width: 50px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+nav .nav_menu {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav_list {
+  list-style: none;
+}
+
+.nav_link {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #492118;
+  transition: color 0.3s ease;
+}
+
+.nav_link:hover {
+  color: #ff6347;
+}
+#cover_img {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .section{
+    margin-top: 20px;
+  }
+  .img_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+  }
+  
+  .img_container img {
+    max-width: 100%;
+    height: auto;
+  }
+  .section p {
+    color: #E0E0E0;
+    text-align: center;
+  }
+
+  .section h2{
+text-align: center;
+color: rgba(73, 33, 24, 1);
+margin-top: 6rem;
+color: #E0E0E0;
+
+  }
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav_menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #E0E0E0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav_menu.active {
+    height: auto;
+    transform: scaleY(1);
+  }
+
+  .nav_list {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+  .section{
+    max-width: 96%;
+  }
+}
