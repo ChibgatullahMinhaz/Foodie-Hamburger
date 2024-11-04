@@ -86,7 +86,6 @@ subscribeBtn.addEventListener("click", ()=>{
     }else{
         alert("Thanks")
                 newsletterPopup.style.display = 'none';
-
     }
 
 })

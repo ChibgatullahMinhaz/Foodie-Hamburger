@@ -87,7 +87,7 @@ nav .nav_menu {
 }
 
 #cover_img {
-  width: 95%;
+  width: 98%;
   margin: 0 auto;
 }
 
@@ -122,12 +122,12 @@ nav .nav_menu {
   font-size: 24px;
   cursor: pointer;
   color: var(--text-color);
-  margin-left: auto; /* Push the button to the right */
+  margin-left: auto;
   transition: color 0.3s;
 }
 
 .theme-toggle:hover {
-  color: var(--nav-link-hover-color); /* Change color on hover */
+  color: var(--nav-link-hover-color); 
 }
 
 .go-to-top {
@@ -149,7 +149,6 @@ nav .nav_menu {
 .go-to-top:hover {
   background-color: #ff4500;
 }
-
 /* footer  */
 footer {
   margin-bottom: 2rem;
@@ -243,12 +242,14 @@ footer p {
     position: absolute;
     top: 60px;
     right: 0;
+    padding: 10px;
     background-color: var(--header-background-color);
     flex-direction: column;
     align-items: flex-start;
     width: 200px;
     height: 0;
     overflow: hidden;
+    border-radius: 0px 0px  10px 10px ;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.3s ease-in-out;
@@ -275,5 +276,13 @@ footer p {
   .popup-content h2{
 font-size:15px;
 margin-bottom: 4px;
+  }
+  nav{
+    position: relative;
+  }
+  .theme-toggle{
+    position: absolute;
+    top: 5px;
+    right:5px;
   }
 }
